@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        .le {
+            background: rgba(73,155,234,1);
+            background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,0.62) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(32,124,229,0.62)));
+            background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,0.62) 100%);
+            background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,0.62) 100%);
+            background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,0.62) 100%);
+            background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,0.62) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#177520', endColorstr='#8283fcb9',GradientType=1 ); /* IE6-9 */
+            color: black;
+            font-weight: bolder;
+        }
+        .chan {
+            background: rgba(241,231,103,1);
+            background: -moz-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(241,231,103,1) 1%, rgba(254,182,69,0.65) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(241,231,103,1)), color-stop(1%, rgba(241,231,103,1)), color-stop(100%, rgba(254,182,69,0.65)));
+            background: -webkit-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(241,231,103,1) 1%, rgba(254,182,69,0.65) 100%);
+            background: -o-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(241,231,103,1) 1%, rgba(254,182,69,0.65) 100%);
+            background: -ms-linear-gradient(left, rgba(241,231,103,1) 0%, rgba(241,231,103,1) 1%, rgba(254,182,69,0.65) 100%);
+            background: linear-gradient(to right, rgba(241,231,103,1) 0%, rgba(241,231,103,1) 1%, rgba(254,182,69,0.65) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1e767', endColorstr='#feb645', GradientType=1 );
+            font-weight: 900;
+        }
+        .head {
+            background: rgb(179,220,237); /* Old browsers */
+            background: -moz-linear-gradient(top, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(179,220,237,1)), color-stop(50%,rgba(41,184,229,1)), color-stop(100%,rgba(188,224,238,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=0 ); /* IE6-9 */
+        }
+        .name1 {
+            background: rgba(145,232,66,1);
+            background: -moz-linear-gradient(left, rgba(145,232,66,1) 0%, rgba(210,255,82,0.77) 71%, rgba(210,255,82,0.67) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(145,232,66,1)), color-stop(71%, rgba(210,255,82,0.77)), color-stop(100%, rgba(210,255,82,0.67)));
+            background: -webkit-linear-gradient(left, rgba(145,232,66,1) 0%, rgba(210,255,82,0.77) 71%, rgba(210,255,82,0.67) 100%);
+            background: -o-linear-gradient(left, rgba(145,232,66,1) 0%, rgba(210,255,82,0.77) 71%, rgba(210,255,82,0.67) 100%);
+            background: -ms-linear-gradient(left, rgba(145,232,66,1) 0%, rgba(210,255,82,0.77) 71%, rgba(210,255,82,0.67) 100%);
+            background: linear-gradient(to right, rgba(145,232,66,1) 0%, rgba(210,255,82,0.77) 71%, rgba(210,255,82,0.67) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#91e842', endColorstr='#d2ff52', GradientType=1 );
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=0 ); /* IE6-9 */
+            font-weight: bold;
+            font-style:italic;
+        }
+    </style>
+</head>
+<body>
+    <table style="border-style:solid">
+        <thead class="head">
+            <tr class=".head">
+                <th colspan="2">
+                    Bảng lương tháng {Month}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="name1">
+                <td>
+                    Mã nhân viên:
+                </td>
+                <td>{MA_CB}</td>
+            </tr>
+            <tr class="name1">
+                <td>Nhân viên: </td>
+                <td>{FullName}</td>
+            </tr>
+            <tr class="name1">
+                <td>Chức vụ: </td>
+                <td>{TEN_CHUCVU}</td>
+            </tr>
+            <tr class="chan" style="height:18px;">
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="le">
+                <td>Lương cơ bản: </td>
+                <td>{LuongCoBan} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>Ngày công đi làm: </td>
+                <td>{CongDiLam}</td>
+            </tr>
+            <tr class="le">
+                <td>Lương trong tháng: </td>
+                <td>{LuongTrongThang} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>Số giờ 130%: </td>
+                <td>{Luong130}</td>
+            </tr>
+            <tr class="le">
+                <td>Số giờ 150%: </td>
+                <td>{Luong150}</td>
+            </tr>
+            <tr class="chan">
+                <td>Số giờ 195%: </td>
+                <td>{Luong195}</td>
+            </tr>
+            <tr class="le">
+                <td>Số giờ 200%: </td>
+                <td>{Luong200}</td>
+            </tr>
+            <tr class="chan">
+                <td>Số giờ 260%: </td>
+                <td>{Luong260}</td>
+            </tr>
+            <tr class="le">
+                <td>Số giờ 300%: </td>
+                <td>{Luong300}</td>
+            </tr>
+            <tr class="chan" style="height:18px;">
+                <td> </td>
+                <td></td>
+            </tr>
+            <tr class="le">
+                <td>Tiền làm thêm: </td>
+                <td>{TienLamThem} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>Số ngày phép: </td>
+                <td>{NgayPhep}</td>
+            </tr>
+            <tr class="le">
+                <td>Số tiền phép: </td>
+                <td>{TienPhep} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>Tiền thưởng công việc: </td>
+                <td>{TienThuongCV}</td>
+            </tr>
+            <tr class="le">
+                <td>Tổng phụ cấp: </td>
+                <td>{TongPhuCap} VNĐ</td>
+            </tr>
+            <!--<tr class="chan">
+                <td>Phụ cấp trách nhiệm: </td>
+                <td>{PhuCapTrN} VNĐ</td>
+            </tr>-->
+            <tr class="chan">
+                <td>Lương khoán chênh lệch: </td>
+                <td>{LuongKhoanChenhLech} VNĐ</td>
+            </tr>
+            <tr class="le">
+                <td>Phụ cấp thâm niên: </td>
+                <td>{PhuCapThamNien} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>Tiền hỗ trợ: </td>
+                <td>{TienHoTro} VNĐ</td>
+            </tr>
+            <tr class="le">
+                <td>Tiền bù: </td>
+                <td>{TienBu} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>Tổng thu nhập: </td>
+                <td>{TongThuNhap} VNĐ</td>
+            </tr>
+            <tr class="le">
+                <td>Tiền công đoàn: </td>
+                <td>{TienCongDoan} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>BHXH 8%: </td>
+                <td>{BHXH} VNĐ</td>
+            </tr>
+            <tr class="le">
+                <td>BHYT 1.5%: </td>
+                <td>{BHYT} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>BHTN 1%: </td>
+                <td>{BHTN} VNĐ</td>
+            </tr>
+            <tr class="le">
+                <td>Số người giảm trừ gia cảnh: </td>
+                <td>{GiamGiaCanh} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>Thu nhập chịu thuế: </td>
+                <td>{ThuNhapChiuThue} VNĐ</td>
+            </tr>
+            <tr class="le">
+                <td>Thuế TNCN: </td>
+                <td>{ThueTNCN} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>Tiền bảo lãnh: </td>
+                <td>{TienBaoLanh} VNĐ</td>
+            </tr>
+            <tr class="le">
+                <td>Trừ tiền: </td>
+                <td>{TruTien} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>Tiền tạm ứng: </td>
+                <td>{TienTamUng} VNĐ</td>
+            </tr>
+            <tr class="le">
+                <td>Lần 1 tiền mặt: </td>
+                <td>{Lan1TM} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>Tổng tiền giảm trừ: </td>
+                <td>{TongGiamTru} VNĐ</td>
+            </tr>
+            <tr class="le">
+                <td>Tổng lương thực lĩnh: </td>
+                <td>{TongLuongThucNhan} VNĐ</td>
+            </tr>
+            <!--<tr class="chan">
+                <td>Phụ cấp thu hút: </td>
+                <td>{PhuCapThuHut} VNĐ</td>
+            </tr>
+            <tr class="le">
+                <td>Phụ cấp nặng nhọc: </td>
+                <td>{PhuCapNangNhoc} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>Phụ cấp kiêm nhiệm: </td>
+                <td>{PhuCapKiemNhiem} VNĐ</td>
+            </tr>
+            <tr class="le">
+                <td>Phụ cấp điện thoại: </td>
+                <td>{PhuCapDienThoai} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>Phụ cấp đi lại: </td>
+                <td>{PhuCapDiLai} VNĐ</td>
+            </tr>-->
+            <!--<tr class="chan">
+                <td>Tổng phụ cấp: </td>
+                <td>{TongPhuCap} VNĐ</td>
+            </tr>-->
+            <!--<tr class="le">
+                <td>Lương khoán chênh lệch: </td>
+                <td>{LuongKhoanChenhLech} VNĐ</td>
+            </tr>-->
+            <!--<tr class="chan">
+                <td>Thu nhập chịu thuế: </td>
+                <td>{ThuNhapChiuThue} VNĐ</td>
+            </tr>-->
+            <!--<tr class="le">
+                <td>Tiền tạm ứng: </td>
+                <td>{TienTamUng} VNĐ</td>
+            </tr>-->
+            <!--<tr class="chan">
+                <td>BHXH 8%: </td>
+                <td>{BHXH} VNĐ</td>
+            </tr>
+            <tr class="le">
+                <td>BHYT 1.5%: </td>
+                <td>{BHYT} VNĐ</td>
+            </tr>
+            <tr class="chan">
+                <td>BHTN 1%: </td>
+                <td>{BHTN} VNĐ</td>
+            </tr>-->
+            <!--<tr class="le">
+                <td>Tiền ăn ca: </td>
+                <td>{TienAnCa} VNĐ</td>
+            </tr>-->
+            <!--<tr class="chan">
+                <td>Tiền công đoàn: </td>
+                <td>{TienCongDoan} VNĐ</td>
+            </tr>-->
+            <!--<tr class="le">
+                <td>Tiền bảo lãnh: </td>
+                <td>{TienBaoLanh} VNĐ</td>
+            </tr>-->
+            <!--<tr class="chan">
+                <td>Tổng thu nhập: </td>
+                <td>{TongThuNhap} VNĐ</td>
+            </tr>-->
+            <!--<tr class="le">
+                <td>Tổng tiền giảm trừ: </td>
+                <td>{TongGiamTru} VNĐ</td>
+            </tr>           
+            <tr class="chan">
+                <td>Lương thực nhận: </td>
+                <td>{TongLuongThucNhan} VNĐ</td>
+            </tr>-->
+            <!--<tr class="le">
+                <td>Tiền trả qua tài khoản: </td>
+                <td>{TraQuaTK} VNĐ</td>
+            </tr>-->
+        </tbody>
+        
+    </table>
+</body>
+</html>
