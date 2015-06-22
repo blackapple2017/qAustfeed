@@ -1138,11 +1138,11 @@ public partial class Modules_TienLuong_BangLuongDong : WebBase
                  .Replace("{PCNhaO}", item["C11"].ToString())//C8
                  .Replace("{ThuongSPCL}", item["C12"].ToString())//C9
                  .Replace("{ThuongSPKK}", item["C13"].ToString())//C10
-                 .Replace("{ThuongTarget}", item["C14"].ToString())//C11
+                 .Replace("{ThuongTarget}", item["C18"].ToString())//C11
                  .Replace("{PhatTarget}", item["C15"].ToString())//C9
                  .Replace("{ThuongTT}", item["C16"].ToString())//C10
                  .Replace("{PhatTT}", item["C17"].ToString())//C11
-                 .Replace("{ThuongTTQ}", item["C18"].ToString())//C9
+                 .Replace("{ThuongTTQ}", item["C70"].ToString())//C9
                  .Replace("{PhatTTQ}", item["C19"].ToString())//C10
                  .Replace("{ThuongDL}", item["C20"].ToString())//C11
                  .Replace("{ThuongCV}", item["C57"].ToString())//C11

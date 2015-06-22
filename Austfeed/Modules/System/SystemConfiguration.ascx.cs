@@ -25,11 +25,11 @@ public partial class Modules_System_SystemConfiguration : UserControlBase
     {
         try
         {
-            if (txtSystemMail.Text.Contains("@gmail.com") == false && !string.IsNullOrEmpty(txtSystemMail.Text))
-            {
-                X.MessageBox.Alert("Thông báo", "Hệ thống chỉ chấp nhận định dạng gmail").Show();
-                return;
-            }
+            //if (txtSystemMail.Text.Contains("@gmail.com") == false && !string.IsNullOrEmpty(txtSystemMail.Text))
+            //{
+            //    X.MessageBox.Alert("Thông báo", "Hệ thống chỉ chấp nhận định dạng gmail").Show();
+            //    return;
+            //}
             string maDonVi = Session["MaDonVi"].ToString();
             HeThongController htController = new HeThongController();
             // tab thông tin chung

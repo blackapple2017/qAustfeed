@@ -157,6 +157,7 @@ public partial class Modules_Base_SendMailForm_SendMail : UserControlBase, ICont
         System.Net.Mail.SmtpClient mailClient = new System.Net.Mail.SmtpClient(host, port);
         mailClient.EnableSsl = true;
         mailClient.UseDefaultCredentials = false;
+        mailClient.DeliveryMethod = SmtpDeliveryMethod.Network;
         mailClient.Credentials = mailAuthentication;
         try
         {
@@ -166,7 +167,8 @@ public partial class Modules_Base_SendMailForm_SendMail : UserControlBase, ICont
         catch (Exception ex)
         {
             //ExtMessage.Dialog.ShowNotification(GlobalResourceManager.GetInstance().GetCommonMessageValue("Error"));
-            return;
+            Dialog.Alert(ex.Message);
+            //return;
         }
         #endregion
 

@@ -42,14 +42,14 @@ public partial class Modules_ChamCongDoanhNghiep_TongHopCongTheoThang : WebBase
                 script = "#{hdfMaDonVi}.setValue('" + DTH.BorderLayout.nodeID + "'); PagingToolbar1.pageIndex = 0; PagingToolbar1.doLoad();"
             }.AddDepartmentList(br, CurrentUser.ID, true);          
         }
-        int thang = DateTime.Now.Month;
-        int nam = DateTime.Now.Year;
-        DAL.DanhSachBangTongHopCong thc = new DanhSachBangTongHopCongController().GetAll(thang, nam);
+        //int thang = DateTime.Now.Month;
+        //int nam = DateTime.Now.Year;
+        DAL.DanhSachBangTongHopCong thc = new DanhSachBangTongHopCongController().GetAll(int.Parse(cbxMonth.SelectedItem.Value), int.Parse(spnYear.Text));
         if (thc != null)
         {
             grpTongHopCong.Title = thc.Title;
             hdfIdBangTongHopCong.Text = thc.ID.ToString();
-            if (thc.Lock == true && thc.Nam == nam && thc.Thang == thang)
+            if (thc.Lock == true && thc.Nam == int.Parse(spnYear.Text) && thc.Thang == int.Parse(cbxMonth.SelectedItem.Value))
             {
                 grpTongHopCong.Reload();
                 btnMoKhoaBangTongHopCong.Show();
@@ -72,7 +72,7 @@ public partial class Modules_ChamCongDoanhNghiep_TongHopCongTheoThang : WebBase
         cmenuThemCanBo.Visible = mnuThemNhanVien.Visible;
         cmenuLoaiBoCanBo.Visible = mnuXoaNhanVien.Visible;
         SetVisibleByControlID(btnChuanBiDuLieuDauVao, btnTongHopCong, mnuLayCongLamThemGio, mnuLayCongLamThemGioDuocChon, mnuTongHopTatCa, mnuTongHopDuocChon, mnuThemNhanVien, mnuXoaNhanVien, btnEditOnGrid, btnKhoaBangChamCong, btnMoKhoaBangTongHopCong);
-        SetEditor();
+        //SetEditor();
         ucChooseEmployee1.AfterClickAcceptButton += new EventHandler(ucChooseEmployee1_AfterClickAcceptButton);      
     }
 

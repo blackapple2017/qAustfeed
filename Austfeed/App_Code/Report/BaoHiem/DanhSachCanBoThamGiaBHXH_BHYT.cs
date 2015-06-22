@@ -101,8 +101,9 @@ public class DanhSachCanBoDieuChinhMucLuongPhuCapNopBHXH : XtraReport
     public void BindData(ReportFilter filter)
     {
         var rpc = new ReportController();
+        HoSoController hs = new HoSoController();
         xrl_tendonvi.Text = "TÊN ĐƠN VỊ: " + ReportController.GetInstance().GetCompanyName(filter.SessionDepartment).ToUpper();
-        xrl_madonvi.Text = "MÃ ĐƠN VỊ: " + filter.SessionDepartment.ToUpper();
+        xrl_madonvi.Text = "MÃ ĐƠN VỊ: " + hs.GetTenVietTatCongTy(filter.SessionDepartment).ToString();
         //xrl_dienthoai.Text = "Điện thoại liên hệ: " + ReportController.GetInstance().GetCompanyPhoneNumber(filter.SessionDepartment);
         xrl_dienthoai.Text = "Địa chỉ: " + ReportController.GetInstance().GetCompanyAddress(filter.SessionDepartment);
         if (!string.IsNullOrEmpty(filter.WhereClause) && filter.WhereClause != "1 = 1")
